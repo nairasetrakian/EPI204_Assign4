@@ -2,7 +2,7 @@
 ------------------------------------
 
 ## Project Description
-**Assignment 4 description:** The purpose of this project is to create updates to Assignment 2 based on instructor feedback and classmate's replication efforts.
+**Assignment 4 description:** The purpose of this project is to update Assignment 2 based on instructor feedback and classmate's replication efforts.
 
 **Assignment4_data_cleaning.sas**
 
