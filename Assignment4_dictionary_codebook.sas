@@ -2,7 +2,8 @@ LIBNAME CHIS "/home/u59641456/EPI207/CHIS2007";
 /********CODEBOOK AND DATA DICTIONARY*********/
 /*Creating codebook using proc freq*/	
 PROC FREQ DATA=CHIS.cleandata;
-TABLE RACEDOF AHEDUC DSTRS30 DSTRS12 AD47 PROXY
+Title 'Codebook';
+TABLE RACEDOF AHEDUC DSTRS30 DSTRS12 AD47
 AGE RACE EDUC POVLL WRKST SPD STD;
 format age age. race race. educ educ. povll povll. wrkst wrkst. spd spd. std std.;
 Label 
@@ -11,7 +12,6 @@ Label
 	  DSTRS30  = 'EXPERIENCED SERIOUS PSYCHOLOGICAL DISTRESS IN THE PAST MONTH (old CHIS variable)'
 	  DSTRS12  = 'EXPERIENCED SERIOUS PSYCHOLOGICAL DISTRESS IN PAST YEAR (old CHIS variable)'
 	  AD47	   = 'TESTED FOR STD IN PAST 12 MOS (old CHIS variable)'
-	  PROXY	   = 'A PROXY INTERVIEW'
 	  AGE      = 'Age'
       RACE     = 'Race/ethnicity'
       EDUC     = 'Education status'
@@ -23,6 +23,7 @@ Where Sex = 2;
 RUN;
 /*creating a data dictionary with all covariates*/
 DATA CHIS.AdultDictionarynew;
+Title 'Data Dictionary';
 SET CHIS.cleandata (keep =
 						   RACEDOF AHEDUC DSTRS30 DSTRS12 AD47 PROXY rakedw0 rakedw80
 						   AGE RACE SEX EDUC POVLL WRKST SPD STD);				   
